@@ -56,7 +56,7 @@ def show_history():
 
     with open(history_file, "r") as f:
         history = json.load(f)
-        for item for history:
+        for item in history:
             files_listbox.insert(END, item['file_path'])
             links_listbox.insert(END, item['download_link'])
 
@@ -73,7 +73,7 @@ button.pack()
 entry = ttk.Entry()
 entry.pack()
 
-history_button =ttk.Button("Показать историю",command=show_history)
+history_button = ttk.Button(text="Показать историю", command=show_history)
 history_button.pack()
 
 window.mainloop()
